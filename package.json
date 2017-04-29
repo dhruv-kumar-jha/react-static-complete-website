@@ -2,12 +2,18 @@
   "name": "react-static-complete-website",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node scripts/server.js",
+    "watch": "cross-env NODE_ENV=development webpack -w",
+    "build": "cross-env NODE_ENV=production webpack -p"
+  },
   "repository": "https://github.com/dhruv-kumar-jha/react-static-complete-website.git",
   "author": "Dhruv Kumar Jha <dhruv@dhruvkumarjha.com>",
   "license": "MIT",
   "devDependencies": {
     "antd": "^2.9.3",
     "axios": "^0.16.1",
+    "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-import": "^1.1.1",
@@ -22,13 +28,14 @@
     "eslint-loader": "^1.7.1",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
     "lodash": "^4.17.4",
     "react": "^15.5.4",
     "react-disqus-comments": "^0.5.2",
     "react-dom": "^15.5.4",
     "react-ga": "^2.2.0",
     "react-helmet": "^5.0.3",
-    "react-router": "^4.1.1",
+    "react-router": "3.0.3",
     "react-static-webpack-plugin": "^2.1.0",
     "webpack": "^2.4.1"
   }

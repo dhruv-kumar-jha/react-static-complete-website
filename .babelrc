@@ -1,0 +1,10 @@
+{
+	"presets" : [["env",{ "modules": false }], "react" ],
+	"plugins": [
+		"lodash",
+		[ "import", {
+			"libraryName": "antd", "style": "css"
+		} ],
+		"syntax-dynamic-import"
+	]
+}
