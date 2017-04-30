@@ -17,7 +17,52 @@ const WebsiteRoutes = {
 				}
 			},
 		},
-
+		{
+			path: 'features',
+			indexRoute: {
+				getComponent(location, cb) {
+					DynamicImport(
+						import(/* webpackChunkName: "features" */'app/content/Features'),
+						cb,
+						'features'
+					);
+				}
+			},
+		},
+		{
+			path: 'about',
+			indexRoute: {
+				getComponent(location, cb) {
+					DynamicImport(
+						import(/* webpackChunkName: "about" */'app/content/About'),
+						cb,
+						'about'
+					);
+				}
+			},
+		},
+		{
+			path: 'contact-us',
+			indexRoute: {
+				getComponent(location, cb) {
+					DynamicImport(
+						import(/* webpackChunkName: "contact-us" */'app/content/ContactUs'),
+						cb,
+						'contact-us'
+					);
+				}
+			},
+		},
+		{
+			path: '*',
+			getComponent(location, cb) {
+				DynamicImport(
+					import(/* webpackChunkName: "page-not-found" */'app/content/PageNotFound'),
+					cb,
+					'page-not-found'
+				);
+			}
+		},
 
 	],
 };

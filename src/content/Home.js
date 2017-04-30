@@ -1,34 +1,39 @@
 'use strict';
 
 import React from 'react';
-import { Link } from 'react-router';
+import DefaultLayout from 'app/layouts/Default';
+import { Heading } from 'app/components/UI';
+import { Row, Col, Carousel } from 'antd';
+
 
 const Home = (props) => {
 
-    return (
-        <div>
+	return (
+		<DefaultLayout>
 
-            <header>
-                
-                <div className="title"><Link to="/">Productivity Application</Link></div>
+			<Heading
+				title="Hey You, Yes You!, Want to be More Productive? Have lists of things you care about? Love simple and sexy UI?"
+			/>
 
-                <nav>
-                    <Link to="/">Home</Link>
-                    <Link to="/features">Features</Link>
-                    <Link to="/gallery">Gallery</Link>
-                    <Link to="/about">About Us</Link>
-                    <Link to="/contact">Contact Us</Link>
-                </nav>
+			<Col span={24} className="component--slider">
+				<Carousel autoplay autoplaySpeed={5000}>
+					<div>
+						<div className="image">
+							<img src="/images/slider/1.png" />
+						</div>
+						<div className="title">This is a screenshot of the Board view page</div>
+					</div>
+					<div>
+						<div className="image">
+							<img src="/images/slider/2.png" />
+						</div>
+						<div className="title">This is a screenshot of The Login page in Chinese Language.</div>
+					</div>
+				</Carousel>
+			</Col>
 
-            </header>
-
-            <div>
-                <h1>HOME PAGE</h1>
-                <p>Welcome to Productivity Application Home Page.</p>
-            </div>
-
-        </div>
-    );
+		</DefaultLayout>
+	);
 
 }
 

@@ -6,6 +6,9 @@ import { render } from 'react-dom';
 import { Router, browserHistory } from 'react-router';
 import WebsiteRoutes from './routes';
 
+import 'public/styles/style.scss';
+
+
 const AppLayout = (props) => {
 	return (
 		<div>

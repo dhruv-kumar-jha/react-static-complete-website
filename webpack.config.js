@@ -64,6 +64,12 @@ const WebpackConfig = {
 				}
 			},
 			{
+				test: /\.scss$/,
+				use: ExtractTextPlugin.extract({
+					use: ['css-loader', 'sass-loader']
+				}),
+			},
+			{
 				use: ExtractTextPlugin.extract({
 					use: 'css-loader',
 				}),
