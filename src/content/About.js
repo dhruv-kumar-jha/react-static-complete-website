@@ -4,6 +4,7 @@ import React from 'react';
 import DefaultLayout from 'app/layouts/Default';
 import { Heading, URL } from 'app/components/UI';
 import { Row, Col } from 'antd';
+import SEO from 'app/components/SEO';
 
 
 const About = (props) => {
@@ -20,6 +21,7 @@ const About = (props) => {
 				<p>For installation instructions and how to use this application, Please visit <URL to="https://github.com/dhruv-kumar-jha/productivity-frontend" /></p>
 			</Col>
 
+			<SEO url="about" />
 
 		</DefaultLayout>
 	);

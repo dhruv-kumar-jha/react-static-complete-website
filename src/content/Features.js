@@ -4,6 +4,7 @@ import React from 'react';
 import DefaultLayout from 'app/layouts/Default';
 import { Heading } from 'app/components/UI';
 import { Row, Col, Icon } from 'antd';
+import SEO from 'app/components/SEO';
 
 
 const Features = (props) => {
@@ -52,6 +53,7 @@ const Features = (props) => {
 				}) }
 			</Row>
 
+			<SEO url="features" />
 
 		</DefaultLayout>
 	);

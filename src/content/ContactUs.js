@@ -4,6 +4,7 @@ import React from 'react';
 import DefaultLayout from 'app/layouts/Default';
 import { Heading } from 'app/components/UI';
 import { Row, Col, message } from 'antd';
+import SEO from 'app/components/SEO';
 
 
 const ContactUs = (props) => {
@@ -44,6 +45,8 @@ const ContactUs = (props) => {
 			</form>
 			</div>
 			</Col>
+
+			<SEO url="contact-us" />
 
 		</DefaultLayout>
 	);

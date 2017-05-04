@@ -4,8 +4,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node scripts/server.js",
+    "clean": "rimraf public/scripts",
     "watch": "cross-env NODE_ENV=development webpack -w",
-    "build": "cross-env NODE_ENV=production webpack -p"
+    "build": "npm run clean && cross-env NODE_ENV=production webpack -p",
+    "deploy": "firebase deploy"
   },
   "repository": "https://github.com/dhruv-kumar-jha/react-static-complete-website.git",
   "author": "Dhruv Kumar Jha <dhruv@dhruvkumarjha.com>",
@@ -38,6 +40,7 @@
     "react-helmet": "^5.0.3",
     "react-router": "3.0.3",
     "react-static-webpack-plugin": "^2.1.0",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "webpack": "^2.4.1"
   }

@@ -4,6 +4,7 @@ import React from 'react';
 import DefaultLayout from 'app/layouts/Default';
 import { Heading } from 'app/components/UI';
 import { Row, Col, Carousel } from 'antd';
+import SEO from 'app/components/SEO';
 
 
 const Home = (props) => {
@@ -16,21 +17,15 @@ const Home = (props) => {
 			/>
 
 			<Col span={24} className="component--slider">
-				<Carousel autoplay autoplaySpeed={5000}>
-					<div>
-						<div className="image">
-							<img src="/images/slider/1.png" />
-						</div>
-						<div className="title">This is a screenshot of the Board view page</div>
+				<div>
+					<div className="image">
+						<img src="/images/slider/1.png" />
 					</div>
-					<div>
-						<div className="image">
-							<img src="/images/slider/2.png" />
-						</div>
-						<div className="title">This is a screenshot of The Login page in Chinese Language.</div>
-					</div>
-				</Carousel>
+					<div className="title" style={{ textAlign: 'center' }}>This is a screenshot of the Board view page</div>
+				</div>
 			</Col>
+
+			<SEO url="home" />
 
 		</DefaultLayout>
 	);

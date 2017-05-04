@@ -1,0 +1,286 @@
+/**	
+ * Our main stylesheet.
+ */
+
+
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
+
+$font_family_default: 'Segoe UI', 'Open Sans', Tahoma, Arial, sans-serif;
+$font_family_sil: 'Shadows Into Light Two', cursive;
+$font_family_lg: 'Lucida Grande', Tahoma;
+
+$header_height: 50px;
+$content_width: 1000px;
+$body_background: #F7F8FA;
+
+
+body {
+	background: $body_background;
+	font-family: $font_family_default;
+}
+
+.website--layout {
+	min-height: 100vh;
+	padding-top: $header_height;
+}
+
+
+// header styles: start
+header.main {
+	height: $header_height;
+	border-bottom: 1px solid #DDD;
+	background: #FFF;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	// padding: 0 50px;
+
+	border-bottom: 4px solid #F7F8FA;
+	box-shadow: 0 0 0 1px #CCC;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.logo {
+		font-size: 18px;
+		font-weight: 700;
+		color: #000;
+		line-height: $header_height;
+
+		a {
+			color: #000;
+		}
+	}
+
+	nav {
+		overflow: hidden;
+		display: flex;
+
+		a {
+			font-weight: 700;
+			font-size: 14px;
+			color: #000;
+			line-height: 24px;
+			margin: 13px 0;
+			&.active {
+				color: #FF0000;
+			}
+		}
+
+		span.sep {
+			font-size: 18px;
+			line-height: 24px;
+			padding:  13px 0;
+			color: #CCC;
+
+			&:before {
+				font-weight: 100;
+				content: '|';
+				padding: 0 10px;
+			}
+		}
+
+	}
+}
+// header styles: end
+
+
+.container {
+	max-width: $content_width;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+
+
+
+
+
+.page-content {
+	padding-top: 70px;
+	padding-bottom: 50px;
+	overflow: auto;
+
+	p {
+		font-size: 18px;
+		line-height: 22px;
+		color: #000;
+		margin-bottom: 10px;
+	}
+
+
+	.heading {
+		font-family: $font_family_sil;
+		color: #000;
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 34px;
+
+		.subtitle {
+			font-family: $font_family_lg;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 16px;
+			line-height: 20px;
+			font-weight: 400;
+			color: #999;
+		}
+
+	}
+
+}
+
+
+.component--slider {
+	margin-top: 50px;
+
+	.ant-carousel .slick-slide {
+		text-align: center;
+		overflow: hidden;
+	}
+
+	.image {
+		max-height: 460px;
+		img {
+			max-width: 100%;
+			border-radius: 4px;
+
+			border: 2px solid rgb(234, 214, 33);
+			padding: 5px;
+			background: #FFEB3B;
+		}
+	}
+
+	.title {
+		font-family: $font_family_lg;
+		color: #999;
+		padding: 10px 20px;
+		font-size: 16px;
+		line-height: 16px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	.slick-dots {
+		li {
+			background: #000;
+		}
+		li.slick-active button { background: #FF0000; }
+	}
+
+}
+
+
+
+.component--features {
+	margin-top: 50px;
+
+	.feature-container {
+		margin-bottom: 12px;
+	}
+
+	.feature {
+		padding: 20px;
+		cursor: pointer;
+		min-height: 100px;
+		height: 100%;
+		color: rgba(0, 0, 0, 0.7);
+		border-radius: 3px;
+		background: #d3f1ff; // #FEA;
+		border: 2px solid #a2d6ef; // #FFE063;
+		margin-right: 12px;
+	}
+
+	.title {
+		display: flex;
+		font-family: $font_family_lg;
+		font-size: 18px;
+		line-height: 100%;
+		font-weight: 700;
+		color: #000;
+		letter-spacing: -1px;
+		.status {
+			margin-right: 10px;
+			color: green;
+		}
+	}
+
+	.description {
+		font-size: 13px;
+		line-height: 15px;
+		margin-top: 15px;
+		color: rgba(0, 0, 0, 0.59);
+	}
+
+}
+
+
+
+.component__form {
+	margin-top: 20px;
+
+	.input {
+		margin-bottom: 20px;
+		&:last-child { margin-bottom: 0; }
+	}
+
+	label {
+		display: block;
+		font-size: 15px;
+		line-height: 24px;
+		font-weight: 700;
+		margin-bottom: 2px;
+	}
+
+	input, textarea {
+		width: 100%;
+		background: #FFF;
+		border: 1px solid #CCC;
+		font-size: 14px;
+		line-height: 16px;
+		padding: 8px 14px;
+	}
+
+	textarea {
+		resize: none;
+		min-height: 200px;
+	}
+
+	button {
+		padding: 8px 14px;
+		background: #FF4848;
+
+		border-radius: 2px;
+		border: 1px solid;
+		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		padding: 4px 10px;
+		display: inline-block;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+		cursor: pointer;
+		color: #FFF;
+		font-weight: 700;
+	}
+
+}
+
+
+
+.component__empty {
+	max-width: 600px;
+	padding: 40px 20px;
+	background: #ffebe4;
+	margin: 0 auto;
+	border-radius: 4px;
+	border: 1px solid #ffc5b1;
+
+	.subtitle {
+		color: #000 !important;
+	}
+
+}
+
+
+
