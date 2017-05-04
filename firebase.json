@@ -6,6 +6,8 @@
         "source": "**",
         "destination": "/200.html"
       }
-    ]
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }
